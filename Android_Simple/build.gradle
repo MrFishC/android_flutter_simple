@@ -1,0 +1,21 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+//plugins {
+//    id 'com.android.application' version '8.1.0-alpha06' apply false
+//    id 'com.android.library' version '8.1.0-alpha06' apply false
+//    id 'org.jetbrains.kotlin.android' version '1.7.21' apply false
+//}
+
+plugins {
+    id 'com.android.application' version '7.4.0' apply false		//操作3:更改version,对应的gradle可以改为7.5-bin
+    id 'com.android.library' version '7.4.0' apply false			//操作3:更改version
+    id 'org.jetbrains.kotlin.android' version '1.7.21' apply false
+}
+
+//Caused by: org.gradle.api.internal.plugins.PluginApplicationException: Failed to apply plugin class 'FlutterPlugin'.
+//操作2:新增
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
